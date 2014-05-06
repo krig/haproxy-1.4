@@ -460,7 +460,7 @@ ifneq ($(USE_PCRE)$(USE_STATIC_PCRE),)
 PCREDIR	        := $(shell pcre-config --prefix 2>/dev/null || echo /usr/local)
 ifneq ($(PCREDIR),)
 PCRE_INC        := $(PCREDIR)/include
-PCRE_LIB        := $(PCREDIR)/lib
+PCRE_LIB        := $(PCREDIR)/$(LIB)
 endif
 
 ifeq ($(USE_STATIC_PCRE),)
